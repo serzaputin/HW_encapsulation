@@ -39,6 +39,83 @@ public class Main {
         printInfo(bas2);
         printInfo(bas3);
         System.out.println("Заправлять бензином или дизелем на заправке");
+
+        System.out.println(" ");
+
+        Amphibian animal1 = new Amphibian("Лягушка", 2, "водоемы");
+        Amphibian animal2 = new Amphibian("Уж пресноводный", 3, "лес, водоемы");
+        printInfo(animal1);
+        printInfo(animal2);
+        Herbivore animal3 = new Herbivore("Газель", 3, "полупустыни", "70 км/ч", "пищей растительного происхождения");
+        Herbivore animal4 = new Herbivore("Жираф", 5, "тропические степи", "40 км/ч", "пищей растительного происхождения");
+        Herbivore animal5 = new Herbivore("Лошадь", 4, "степи", "80 км/ч", "пищей растительного происхождения");
+        printInfo(animal3);
+        printInfo(animal4);
+        printInfo(animal5);
+        Predator animal6 = new Predator("Гиена", 2, "пустыни", "65 км/ч", "падаль");
+        Predator animal7 = new Predator("Тигр", 6, "тропические леса", "60 км/ч", "мясо");
+        Predator animal8 = new Predator("Медведь", 10, "леса", "6 км/ч", "мясо, рыба, ягоды");
+        printInfo(animal6);
+        printInfo(animal7);
+        printInfo(animal8);
+        Flightless animal9 = new Flightless("Павлин", 7, "леса-саванны", "по земле, летают");
+        Flightless animal10 = new Flightless("Пингвин", 2, "открытое море", "по земле, плавают");
+        Flightless animal11 = new Flightless("Птица додо", 3, "леса", "по земле");
+        printInfo(animal9);
+        printInfo(animal10);
+        printInfo(animal11);
+        Flying animal12 = new Flying("Чайка", 1, "возле рек и водоемов", "летает");
+        Flying animal13 = new Flying("Альбатрос", 2, "ледяные воды Антарктиды", "летает");
+        Flying animal14 = new Flying("Сокол", 4, "в пустынях, тундре, тайге, лугах, саваннах", "летает");
+        printInfo(animal12);
+        printInfo(animal13);
+        printInfo(animal14);
+    }
+
+    public static void printInfo(Amphibian amphibian) {
+        System.out.println(amphibian.getName() +
+                ": возраст " + amphibian.getAge() +
+                " лет, среда обитания " + amphibian.getLivingEnvironment() +
+                " , принадлежит к классу земноводные"
+        );
+    }
+
+    public static void printInfo(Herbivore herbivore) {
+        System.out.println(herbivore.getName() +
+                ": возраст " + herbivore.getAge() +
+                " лет, среда обитания " + herbivore.getLivingEnvironment() +
+                ", скорость передвижения " + herbivore.getMovementSpeed() +
+                ", питается " + herbivore.getTypeFood() +
+                ", принадлежит к классу млекопитающиеся"
+        );
+    }
+
+    public static void printInfo(Predator predator) {
+        System.out.println(predator.getName() +
+                ": возраст " + predator.getAge() +
+                " лет, среда обитания " + predator.getLivingEnvironment() +
+                ", скорость передвижения " + predator.getMovementSpeed() +
+                ", питается " + predator.getTypeFood() +
+                ", принадлежит к классу хищники"
+        );
+    }
+
+    public static void printInfo(Flightless flightless) {
+        System.out.println(flightless.getName() +
+                ": возраст " + flightless.getAge() +
+                " лет, среда обитания " + flightless.getLivingEnvironment() +
+                ", способ передвижения " + flightless.getTypeMovement() +
+                ", принадлежит к классу нелетающие птицы"
+        );
+    }
+
+    public static void printInfo(Flying flying) {
+        System.out.println(flying.getName() +
+                ": возраст " + flying.getAge() +
+                " лет, среда обитания " + flying.getLivingEnvironment() +
+                ", способ передвижения " + flying.getTypeMovement() +
+                ", принадлежит к классу летающие птицы"
+        );
     }
 
     public static void printInfo(Car car) {
